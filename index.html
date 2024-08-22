@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex{
+            display:flex;
+            flex-direction:column;
+            gap:10px;
+            padding:40px;
+        }
+        button{
+            padding:12px 20px;
+            background-color:rgba(0, 0, 0, 0.592);
+            border:none;
+            color:white;
+            border-radius:10px;
+        }
+        h1{
+            margin:0;
+            color:rgba(0, 0, 0, 0.592);
+        }
+        input{
+            width:100px;
+            height:30px;
+            background-color:rgba(0, 0, 0, 0.592);
+            color:white;
+            padding-left:5px;
+            border:none;
+            border-radius:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+      <div>
+        <input type="number" name="first" id="x">
+        <input type="number" name="second" id="y">
+      </div>
+      <div>
+        <button onclick="addvalue()">ADD</button>
+        <button onclick="subvalue()">SUB</button>
+        <button onclick="multiplyvalue()">MUL</button>
+        <button onclick="dividevalue()">DIV</button>
+        <button onclick="modvalue()">MOD</button>
+        <button onclick="powervalue()">POWER</button>
+        <button onclick="expvalue()">EXP</button>
+        <button onclick="sqrtvalue()">ROOT</button>
+      </div>
+
+        <h1 id="demo">Result</h1>
+    </div>
+    <script>
+        function addvalue(){
+            var x=parseInt(document.getElementById("x").value);
+            var y=parseInt(document.getElementById("y").value);
+            var z=x+y;
+            document.getElementById("demo").innerHTML=z;
+        }
+        function subvalue(){
+            var x=parseInt(document.getElementById("x").value);
+            var y=parseInt(document.getElementById("y").value);
+            var z=x-y;
+            document.getElementById("demo").innerHTML=z;
+        }
+        function multiplyvalue(){
+            var x=parseInt(document.getElementById("x").value);
+            var y=parseInt(document.getElementById("y").value);
+            var z=x*y;
+            document.getElementById("demo").innerHTML=z;
+        }
+        function dividevalue(){
+            var x=parseInt(document.getElementById("x").value);
+            var y=parseInt(document.getElementById("y").value);
+            var z=x/y;
+            document.getElementById("demo").innerHTML=z;
+        }
+        function modvalue(){
+            var x=parseInt(document.getElementById("x").value);
+            var y=parseInt(document.getElementById("y").value);
+            var z=x%y;
+            document.getElementById("demo").innerHTML=z;
+        }
+        function powervalue(){
+            var x=parseInt(document.getElementById("x").value);
+            var y=parseInt(document.getElementById("y").value);
+            var z=Math.pow(x,y);
+            document.getElementById("demo").innerHTML=z;
+        }
+        function expvalue(){
+            var x=parseInt(document.getElementById("x").value);
+            var z=Math.exp(x);
+            document.getElementById("demo").innerHTML=z;
+        }
+        function sqrtvalue(){
+            var x=parseInt(document.getElementById("x").value);
+            var y=parseInt(document.getElementById("y").value);
+            var z=Math.sqrt(x*y);
+            document.getElementById("demo").innerHTML=z;
+        }
+    </script>
+</body>
+</html>
